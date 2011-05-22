@@ -1,1 +1,13 @@
 C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\bin\Debug\FotoChamada.exe.config
+C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\bin\Debug\dbFotoChamada.sdf
+C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\bin\Debug\FotoChamada.exe
+C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\bin\Debug\FotoChamada.pdb
+C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\bin\Debug\FotoChamada.xml
+C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\obj\x86\Debug\FotoChamada.Form1.resources
+C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\obj\x86\Debug\FotoChamada.Resources.resources
+C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\obj\x86\Debug\FotoChamada.exe
+C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\obj\x86\Debug\FotoChamada.xml
+C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\obj\x86\Debug\FotoChamada.pdb
