@@ -23,12 +23,12 @@
         turmasRow = DbFotoChamadaDataSet.Turma.NewTurmaRow()
 
         Dim teste As String
-        teste = ComboBox1.ValueMember.Trim & TextBox1.Text.Trim
+        teste = ComboBox1.SelectedValue.Trim & TextBox1.Text.Trim
         MsgBox(teste)
 
-        turmasRow.TurmaID = ComboBox1.ValueMember.Trim & TextBox1.Text.Trim
-        turmasRow.Curso = ComboBox1.ValueMember
-        turmasRow.Professor = ComboBox2.ValueMember
+        turmasRow.TurmaID = ComboBox1.SelectedValue.Trim & TextBox1.Text.Trim
+        turmasRow.Curso = ComboBox1.SelectedValue
+        turmasRow.Professor = ComboBox2.SelectedValue
         turmasRow.Inicio = InicioDateTimePicker.Value
         turmasRow.Termino = TerminoDateTimePicker.Value
 
@@ -36,6 +36,7 @@
         Me.Validate()
         Me.TurmaBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.DbFotoChamadaDataSet)
+        Me.DialogResult = DialogResult.OK
 
     End Sub
 End Class
