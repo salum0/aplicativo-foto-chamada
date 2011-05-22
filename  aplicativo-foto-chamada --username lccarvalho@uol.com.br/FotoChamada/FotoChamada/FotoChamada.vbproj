@@ -101,6 +101,24 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmAlunos.Designer.vb">
+      <DependentUpon>frmAlunos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlunos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCursos.Designer.vb">
+      <DependentUpon>frmCursos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCursos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfessores.Designer.vb">
+      <DependentUpon>frmProfessores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProfessores.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -120,6 +138,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlunos.resx">
+      <DependentUpon>frmAlunos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCursos.resx">
+      <DependentUpon>frmCursos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProfessores.resx">
+      <DependentUpon>frmProfessores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

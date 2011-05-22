@@ -11,3 +11,6 @@ C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\ob
 C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\obj\x86\Debug\FotoChamada.exe
 C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\obj\x86\Debug\FotoChamada.xml
 C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\obj\x86\Debug\FotoChamada.pdb
+C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\obj\x86\Debug\FotoChamada.frmCursos.resources
+C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\obj\x86\Debug\FotoChamada.frmProfessores.resources
+C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\obj\x86\Debug\FotoChamada.frmAlunos.resources
