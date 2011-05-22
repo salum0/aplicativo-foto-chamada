@@ -15,3 +15,5 @@ C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\ob
 C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\obj\x86\Debug\FotoChamada.frmProfessores.resources
 C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\obj\x86\Debug\FotoChamada.frmAlunos.resources
 C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\bin\Debug\ZedGraph.dll
+C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\obj\x86\Debug\FotoChamada.frmTurmas.resources
+C:\Users\LCWIN\Documents\Unicamp\FotoChamadaSVN\trunk\FotoChamada\FotoChamada\obj\x86\Debug\FotoChamada.frmVerTurmas.resources
