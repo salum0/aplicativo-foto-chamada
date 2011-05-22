@@ -49,6 +49,7 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.VerTurmasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -80,7 +81,7 @@ Partial Class Form1
         '
         'CadastrosToolStripMenuItem
         '
-        Me.CadastrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CursosToolStripMenuItem, Me.ProfessoresToolStripMenuItem, Me.AlunosToolStripMenuItem, Me.TurmasToolStripMenuItem})
+        Me.CadastrosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CursosToolStripMenuItem, Me.ProfessoresToolStripMenuItem, Me.AlunosToolStripMenuItem, Me.TurmasToolStripMenuItem, Me.VerTurmasToolStripMenuItem})
         Me.CadastrosToolStripMenuItem.Name = "CadastrosToolStripMenuItem"
         Me.CadastrosToolStripMenuItem.Size = New System.Drawing.Size(68, 20)
         Me.CadastrosToolStripMenuItem.Text = "&Cadastros"
@@ -262,6 +263,12 @@ Partial Class Form1
         Me.Button3.Text = "Processar"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'VerTurmasToolStripMenuItem
+        '
+        Me.VerTurmasToolStripMenuItem.Name = "VerTurmasToolStripMenuItem"
+        Me.VerTurmasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.VerTurmasToolStripMenuItem.Text = "&Ver Turmas"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -310,5 +317,6 @@ Partial Class Form1
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents VerTurmasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
