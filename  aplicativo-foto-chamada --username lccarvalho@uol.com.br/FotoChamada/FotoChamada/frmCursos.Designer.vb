@@ -235,7 +235,7 @@ Partial Class frmCursos
         Me.Controls.Add(Me.CursoDataGridView)
         Me.Controls.Add(Me.CursoBindingNavigator)
         Me.Name = "frmCursos"
-        Me.Text = "frmCursos"
+        Me.Text = "Cadastro de Cursos"
         CType(Me.DbFotoChamadaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CursoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CursoBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()

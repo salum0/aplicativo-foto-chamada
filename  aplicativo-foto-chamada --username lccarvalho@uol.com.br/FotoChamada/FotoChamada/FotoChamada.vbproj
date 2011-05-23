@@ -118,6 +118,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbFotoChamadaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dbFotoChamadaDataSet.vb">
+      <DependentUpon>dbFotoChamadaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>

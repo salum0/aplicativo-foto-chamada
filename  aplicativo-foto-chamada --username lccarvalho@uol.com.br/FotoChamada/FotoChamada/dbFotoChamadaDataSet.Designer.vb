@@ -2516,9 +2516,9 @@ Partial Public Class dbFotoChamadaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddHorarioRow(ByVal HorarioID As String, ByVal parentTurmaRowByHorario_Turma As TurmaRow, ByVal DiaSemana As Date, ByVal HoraInicio As Decimal, ByVal HoraTermino As Decimal) As HorarioRow
+        Public Overloads Function AddHorarioRow(ByVal parentTurmaRowByHorario_Turma As TurmaRow, ByVal DiaSemana As String, ByVal HoraInicio As Date, ByVal HoraTermino As Date) As HorarioRow
             Dim rowHorarioRow As HorarioRow = CType(Me.NewRow,HorarioRow)
-            Dim columnValuesArray() As Object = New Object() {HorarioID, Nothing, DiaSemana, HoraInicio, HoraTermino}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, DiaSemana, HoraInicio, HoraTermino}
             If (Not (parentTurmaRowByHorario_Turma) Is Nothing) Then
                 columnValuesArray(1) = parentTurmaRowByHorario_Turma(0)
             End If
@@ -2529,7 +2529,7 @@ Partial Public Class dbFotoChamadaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindByHorarioID(ByVal HorarioID As String) As HorarioRow
+        Public Function FindByHorarioID(ByVal HorarioID As Integer) As HorarioRow
             Return CType(Me.Rows.Find(New Object() {HorarioID}),HorarioRow)
         End Function
         
@@ -2560,23 +2560,25 @@ Partial Public Class dbFotoChamadaDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnHorarioID = New Global.System.Data.DataColumn("HorarioID", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnHorarioID = New Global.System.Data.DataColumn("HorarioID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnHorarioID)
             Me.columnTurma = New Global.System.Data.DataColumn("Turma", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTurma)
-            Me.columnDiaSemana = New Global.System.Data.DataColumn("DiaSemana", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnDiaSemana = New Global.System.Data.DataColumn("DiaSemana", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDiaSemana)
-            Me.columnHoraInicio = New Global.System.Data.DataColumn("HoraInicio", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnHoraInicio = New Global.System.Data.DataColumn("HoraInicio", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnHoraInicio)
-            Me.columnHoraTermino = New Global.System.Data.DataColumn("HoraTermino", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnHoraTermino = New Global.System.Data.DataColumn("HoraTermino", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnHoraTermino)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnHorarioID}, true))
+            Me.columnHorarioID.AutoIncrement = true
+            Me.columnHorarioID.AutoIncrementSeed = -1
+            Me.columnHorarioID.AutoIncrementStep = -1
             Me.columnHorarioID.AllowDBNull = false
             Me.columnHorarioID.Unique = true
-            Me.columnHorarioID.MaxLength = 100
-            Me.columnTurma.AllowDBNull = false
             Me.columnTurma.MaxLength = 20
             Me.columnDiaSemana.AllowDBNull = false
+            Me.columnDiaSemana.MaxLength = 20
             Me.columnHoraInicio.AllowDBNull = false
             Me.columnHoraTermino.AllowDBNull = false
         End Sub
@@ -4091,9 +4093,9 @@ Partial Public Class dbFotoChamadaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property HorarioID() As String
+        Public Property HorarioID() As Integer
             Get
-                Return CType(Me(Me.tableHorario.HorarioIDColumn),String)
+                Return CType(Me(Me.tableHorario.HorarioIDColumn),Integer)
             End Get
             Set
                 Me(Me.tableHorario.HorarioIDColumn) = value
@@ -4104,7 +4106,11 @@ Partial Public Class dbFotoChamadaDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property Turma() As String
             Get
-                Return CType(Me(Me.tableHorario.TurmaColumn),String)
+                Try 
+                    Return CType(Me(Me.tableHorario.TurmaColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Turma' in table 'Horario' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableHorario.TurmaColumn) = value
@@ -4113,9 +4119,9 @@ Partial Public Class dbFotoChamadaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property DiaSemana() As Date
+        Public Property DiaSemana() As String
             Get
-                Return CType(Me(Me.tableHorario.DiaSemanaColumn),Date)
+                Return CType(Me(Me.tableHorario.DiaSemanaColumn),String)
             End Get
             Set
                 Me(Me.tableHorario.DiaSemanaColumn) = value
@@ -4124,9 +4130,9 @@ Partial Public Class dbFotoChamadaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property HoraInicio() As Decimal
+        Public Property HoraInicio() As Date
             Get
-                Return CType(Me(Me.tableHorario.HoraInicioColumn),Decimal)
+                Return CType(Me(Me.tableHorario.HoraInicioColumn),Date)
             End Get
             Set
                 Me(Me.tableHorario.HoraInicioColumn) = value
@@ -4135,9 +4141,9 @@ Partial Public Class dbFotoChamadaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property HoraTermino() As Decimal
+        Public Property HoraTermino() As Date
             Get
-                Return CType(Me(Me.tableHorario.HoraTerminoColumn),Decimal)
+                Return CType(Me(Me.tableHorario.HoraTerminoColumn),Date)
             End Get
             Set
                 Me(Me.tableHorario.HoraTerminoColumn) = value
@@ -4154,6 +4160,18 @@ Partial Public Class dbFotoChamadaDataSet
                 Me.SetParentRow(value, Me.Table.ParentRelations("Horario_Turma"))
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsTurmaNull() As Boolean
+            Return Me.IsNull(Me.tableHorario.TurmaColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetTurmaNull()
+            Me(Me.tableHorario.TurmaColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -6921,7 +6939,7 @@ Namespace dbFotoChamadaDataSetTableAdapters
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(p1,String)
             End If
             If (p2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p2")
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(1).Value = CType(p2,String)
             End If
@@ -6954,7 +6972,7 @@ Namespace dbFotoChamadaDataSetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(p1,String)
             End If
             If (p2 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("p2")
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(1).Value = CType(p2,String)
             End If
