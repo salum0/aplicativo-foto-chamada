@@ -610,13 +610,7 @@
         <xs:element name="Horario" msprop:Generator_TableClassName="HorarioDataTable" msprop:Generator_TableVarName="tableHorario" msprop:Generator_TablePropName="Horario" msprop:Generator_RowDeletingName="HorarioRowDeleting" msprop:Generator_UserTableName="Horario" msprop:Generator_RowChangingName="HorarioRowChanging" msprop:Generator_RowEvHandlerName="HorarioRowChangeEventHandler" msprop:Generator_RowDeletedName="HorarioRowDeleted" msprop:Generator_RowEvArgName="HorarioRowChangeEvent" msprop:Generator_RowChangedName="HorarioRowChanged" msprop:Generator_RowClassName="HorarioRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="HorarioID" msprop:Generator_ColumnVarNameInTable="columnHorarioID" msprop:Generator_ColumnPropNameInRow="HorarioID" msprop:Generator_ColumnPropNameInTable="HorarioIDColumn" msprop:Generator_UserColumnName="HorarioID">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="HorarioID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnHorarioID" msprop:Generator_ColumnPropNameInRow="HorarioID" msprop:Generator_ColumnPropNameInTable="HorarioIDColumn" msprop:Generator_UserColumnName="HorarioID" type="xs:int" />
               <xs:element name="Turma" msprop:Generator_ColumnVarNameInTable="columnTurma" msprop:Generator_ColumnPropNameInRow="Turma" msprop:Generator_ColumnPropNameInTable="TurmaColumn" msprop:Generator_UserColumnName="Turma">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -624,9 +618,15 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="DiaSemana" msprop:Generator_ColumnVarNameInTable="columnDiaSemana" msprop:Generator_ColumnPropNameInRow="DiaSemana" msprop:Generator_ColumnPropNameInTable="DiaSemanaColumn" msprop:Generator_UserColumnName="DiaSemana" type="xs:dateTime" />
-              <xs:element name="HoraInicio" msprop:Generator_ColumnVarNameInTable="columnHoraInicio" msprop:Generator_ColumnPropNameInRow="HoraInicio" msprop:Generator_ColumnPropNameInTable="HoraInicioColumn" msprop:Generator_UserColumnName="HoraInicio" type="xs:decimal" />
-              <xs:element name="HoraTermino" msprop:Generator_ColumnVarNameInTable="columnHoraTermino" msprop:Generator_ColumnPropNameInRow="HoraTermino" msprop:Generator_ColumnPropNameInTable="HoraTerminoColumn" msprop:Generator_UserColumnName="HoraTermino" type="xs:decimal" />
+              <xs:element name="DiaSemana" msprop:Generator_ColumnVarNameInTable="columnDiaSemana" msprop:Generator_ColumnPropNameInRow="DiaSemana" msprop:Generator_ColumnPropNameInTable="DiaSemanaColumn" msprop:Generator_UserColumnName="DiaSemana">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HoraInicio" msprop:Generator_ColumnVarNameInTable="columnHoraInicio" msprop:Generator_ColumnPropNameInRow="HoraInicio" msprop:Generator_ColumnPropNameInTable="HoraInicioColumn" msprop:Generator_UserColumnName="HoraInicio" type="xs:dateTime" />
+              <xs:element name="HoraTermino" msprop:Generator_ColumnVarNameInTable="columnHoraTermino" msprop:Generator_ColumnPropNameInRow="HoraTermino" msprop:Generator_ColumnPropNameInTable="HoraTerminoColumn" msprop:Generator_UserColumnName="HoraTermino" type="xs:dateTime" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

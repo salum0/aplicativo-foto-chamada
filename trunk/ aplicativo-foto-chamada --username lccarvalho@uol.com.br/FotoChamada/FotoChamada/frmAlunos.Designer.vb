@@ -235,7 +235,7 @@ Partial Class frmAlunos
         Me.Controls.Add(Me.AlunoDataGridView)
         Me.Controls.Add(Me.AlunoBindingNavigator)
         Me.Name = "frmAlunos"
-        Me.Text = "frmAlunos"
+        Me.Text = "Cadastro de Alunos"
         CType(Me.DbFotoChamadaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AlunoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AlunoBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
